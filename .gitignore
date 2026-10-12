@@ -2,3 +2,12 @@
 .Rhistory
 .RData
 .Ruserdata
+
+
+# RStudio
+.RData
+.Rhistory
+.Rproj.user/
+
+# Excel temporary files
+~$*
