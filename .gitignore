@@ -1,0 +1,9 @@
+
+# RStudio 임시 파일 및 개인 설정
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Excel 임시 파일
+~$*
