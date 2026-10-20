@@ -1,16 +1,9 @@
-.Rproj.user
+
+# RStudio 임시 파일 및 개인 설정
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
-<<<<<<< HEAD
 
-
-# RStudio
-.RData
-.Rhistory
-.Rproj.user/
-
-# Excel temporary files
+# Excel 임시 파일
 ~$*
-=======
->>>>>>> origin/develop

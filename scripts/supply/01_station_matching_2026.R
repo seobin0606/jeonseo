@@ -28,6 +28,12 @@
 # 1. 패키지 불러오기
 source("scripts/supply/00_packages.R")
 
+dir.create(
+  "data/processed/supply/review",
+  recursive = TRUE,
+  showWarnings = FALSE
+)
+
 # 2. 입력 파일 확인
 stopifnot(
   file.exists("data/raw/supply/station_2026.csv"),
@@ -332,22 +338,22 @@ write_excel_csv(
 
 write_excel_csv(
   station_review,
-  "data/processed/supply/station_review_2026.csv"
+  "data/processed/supply/review/station_review_2026.csv"
 )
 
 write_excel_csv(
   single_candidates,
-  "data/processed/supply/single_candidates_2026.csv"
+  "data/processed/supply/review/single_candidates_2026.csv"
 )
 
 write_excel_csv(
   multiple_candidates,
-  "data/processed/supply/multiple_candidates_2026.csv"
+  "data/processed/supply/review/multiple_candidates_2026.csv"
 )
 
 write_excel_csv(
   unmatched_stations,
-  "data/processed/supply/unmatched_stations_2026.csv"
+  "data/processed/supply/review/unmatched_stations_2026.csv"
 )
 
 # ============================================================

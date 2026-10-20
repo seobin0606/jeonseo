@@ -142,7 +142,7 @@ car_final %>%
 
 
 # 자동차 등록 데이터 임시 저장
-write_csv(car_final, "data/processed/car_registration_preliminary.csv")
+write_csv(car_final, "data/processed/demand/car_registration_preliminary.csv")
 
 
 

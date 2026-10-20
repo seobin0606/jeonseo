@@ -6,6 +6,11 @@
 # ==========================================
 
 library(tidyverse)
+dir.create(
+  "results/demand",
+  recursive = TRUE,
+  showWarnings = FALSE
+)
 
 car_data <- read_csv("data/processed/car_registration_final.csv",show_col_types = FALSE)
 traffic_data <- read_csv("data/processed/traffic_origin_2024_final.csv",show_col_types = FALSE)
@@ -166,10 +171,10 @@ top10_stability <- demand_sensitivity %>%
 write_csv(demand_sensitivity, "data/processed/demand_sensitivity.csv")
 
 # 가중치별 순위 비교 결과 저장
-write_csv(rank_comparison,"results/demand_rank_comparison.csv")
+write_csv(rank_comparison,"results/demand/demand_rank_comparison.csv")
 
 # 상위 10위 진입 안정성 분석 결과 저장 (새로 추가)
-write_csv(top10_stability,"results/demand_top10_stability.csv")
+write_csv(top10_stability,"results/demand/demand_top10_stability.csv")
 
 
 # ============================================================
@@ -200,7 +205,7 @@ p1 <- ggplot(
 print(p1)
 
 # 그래프 저장
-ggsave(filename = "results/demand_top20.png", plot = p1, width = 10, height = 8, dpi = 300)
+ggsave(filename = "results/demand/demand_top20.png", plot = p1, width = 10, height = 8, dpi = 300)
 
 # ============================================================
 # 최종 잠재수요 분석 데이터 저장
@@ -220,7 +225,7 @@ demand_final <- demand_sensitivity %>%
   arrange(잠재수요순위)
 
 # 최종 분석 결과 CSV 저장
-write_csv(demand_final, "data/processed/demand_final.csv")
+write_csv(demand_final, "data/processed/demand/demand_final.csv")
 
 
 

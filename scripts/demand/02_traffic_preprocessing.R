@@ -70,7 +70,7 @@ stopifnot(
 )
 
 # 2024년 승용차 발생통행량 임시 저장
-write_csv(traffic_origin_2024,"data/processed/traffic_origin_2024_preliminary.csv")
+write_csv(traffic_origin_2024,"data/processed/demand/traffic_origin_2024_preliminary.csv")
 
 
 

@@ -292,12 +292,12 @@ dir.create(
 
 write_csv(
   car_final_ready,
-  "data/processed/car_registration_final.csv"
+  "data/processed/demand/car_registration_final.csv"
 )
 
 write_csv(
   traffic_final_ready,
-  "data/processed/traffic_origin_2024_final.csv"
+  "data/processed/demand/traffic_origin_2024_final.csv"
 )
 
 cat("교통존 및 행정구역 매핑 완료\n")
